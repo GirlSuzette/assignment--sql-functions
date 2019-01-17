@@ -1,10 +1,11 @@
 -- Count the number of facilities
-SELECT COUNT (*) FROM Facilities  
+SELECT COUNT (*) AS "Total" FROM Facilities; 
 -- Count the number of expensive facilities
-SELECT COUNT(*) FROM 
+SELECT COUNT(*) AS "Total" FROM Facilities WHERE MonthlyMaintenance = (SELECT MAX(MonthlyMaintenance) FROM Facilities);
 -- Count the number of recommendations each member makes.
-
+SELECT RecommendedBy, COUNT(*) AS "Recommendations"  FROM Members  WHERE RecommendedBy IS NOT NULL GROUP BY RecommendedBy;
 -- List the total slots booked per facility
+SELECT FacilityId, SUM(Slots) AS "Total_Slots" FROM Bookings GROUP BY FacilityId;
 
 -- List the total slots booked per facility in a given month
 
