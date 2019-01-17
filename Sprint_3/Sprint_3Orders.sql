@@ -6,8 +6,10 @@ SELECT AVG(Amount) AS "Average Amount" FROM Orders;
 -- Write a SQL statement to find the number of salesmen currently listing for all of their customers.
 SELECT COUNT(DISTINCT SalesmanId) AS "Number_Salesmen" FROM Orders;
 -- Write a SQL statement to know how many customers have listed their names.
-
+SELECT COUNT(*) AS "Many_Customers" FROM Customer;
+SELECT COUNT(DISTINCT CustomerId) AS "Many_Customers" FROM Orders;
 -- Write a SQL statement to find the number of customers who gets at least a value gradation for his/her performance.
+SELECT COUNT(ALL Grade) AS "Gradation_Grade" FROM Customer; 
 -- Write a SQL statement to get the maximum purchase amount from all the orders.
 -- Write a SQL statement to get the minimum purchase amount of all the orders.
 -- Write a SQL statement which selects the highest grade for each of the cities of the customers.
