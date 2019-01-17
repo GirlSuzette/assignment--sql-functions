@@ -1,5 +1,5 @@
 -- How many days are between the current date and the f_bday column?
-SELECT ROUND(TIMESTAMPDIFF(DAY, Birthday, CURDATE())) AS "AÑOS" FROM Friends WHERE Birthday IS NOT NULL;
+SELECT ROUND(TIMESTAMPDIFF(DAY, Birthday, CURDATE())) AS "Day" FROM Friends WHERE Birthday IS NOT NULL;
 -- How old are our friends?
 SELECT ROUND(DATEDIFF(CURDATE(), Birthday) / 365) AS "AÑOS" FROM Friends WHERE Birthday IS NOT NULL;
 -- Write a query to know the day of the week a friends’ birthday is on.

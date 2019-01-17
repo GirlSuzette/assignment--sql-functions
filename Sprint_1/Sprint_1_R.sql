@@ -6,11 +6,9 @@ SELECT COUNT(*) AS "Total" FROM Facilities WHERE MonthlyMaintenance = (SELECT MA
 SELECT RecommendedBy, COUNT(*) AS "Recommendations"  FROM Members  WHERE RecommendedBy IS NOT NULL GROUP BY RecommendedBy;
 -- List the total slots booked per facility
 SELECT FacilityId, SUM(Slots) AS "Total_Slots" FROM Bookings GROUP BY FacilityId;
-
 -- List the total slots booked per facility in a given month
 
 -- List the total slots booked per facility per month
-
 -- Find the count of members who have made at least one booking
 -- List facilities with more than 1000 slots booked
 -- Find the total revenue of each facility
